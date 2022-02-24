@@ -2,6 +2,8 @@
 //THE TEST SERVER IS RUNNING ON LOCALHOST:3000//
 ////////////////////////////////////////////////
 
+const { get } = require("express/lib/response");
+
 // PROBLEM 1
 /*
     In the index.html file in this folder there is a button with an id of 'say-hello-button'!
@@ -77,6 +79,10 @@ sayHelloButton.addEventListener("click", sayHello)
 
 const ohMy = () => {
     // YOUR CODE HERE
+    axios.get(`http://localhost:3000/amimals`)
+        .then(response => {
+            return response.data
+        })
 }
 
 document.getElementById('animals-button').addEventListener('click', ohMy)
