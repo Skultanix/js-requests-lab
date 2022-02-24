@@ -2,6 +2,8 @@
 //THE TEST SERVER IS RUNNING ON LOCALHOST:3000//
 ////////////////////////////////////////////////
 
+const { default: axios } = require("axios");
+
 //const { default: axios } = require("axios");
 //const { get } = require("express/lib/response");
 
@@ -133,8 +135,11 @@ document.getElementById(`repeat-button`).addEventListener(`click`,repeatMyParam)
 
 // CODE HERE
 
-
-
+function getRequest() {
+    axios.get('http://localhost:3000/query-test')
+    .then(({data}) => console.log(data))
+}
+document.getElementById("query-button").addEventListener("click", getRequest)
 ////////////////
 //INTERMEDIATE//
 ////////////////
