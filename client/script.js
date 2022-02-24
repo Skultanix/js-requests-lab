@@ -62,7 +62,7 @@ const sayHello = () => {
 // DO NOT EDIT FUNCTION
 
 // CODE HERE
-
+sayHelloButton.addEventListener("click", sayHello)
 
 // PROBLEM 5 
 /*
