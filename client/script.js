@@ -11,6 +11,7 @@
 
 // CODE HERE
 
+let sayHelloButton = document.getElementById(`say-hello-button`)
 
 // PROBLEM 2
 /*
