@@ -22,6 +22,10 @@ let sayHelloButton = document.getElementById(`say-hello-button`)
 
 // CODE HERE
 
+sayHelloButton.addEventListener("mouseover", () => {
+    sayHelloButton.style.backgroundColor = `black`;
+    sayHelloButton.style.color = `white`;
+})
 
 // PROBLEM 3
 /*
