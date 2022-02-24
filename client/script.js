@@ -2,7 +2,8 @@
 //THE TEST SERVER IS RUNNING ON LOCALHOST:3000//
 ////////////////////////////////////////////////
 
-const { get } = require("express/lib/response");
+//const { default: axios } = require("axios");
+//const { get } = require("express/lib/response");
 
 // PROBLEM 1
 /*
@@ -79,9 +80,9 @@ sayHelloButton.addEventListener("click", sayHello)
 
 const ohMy = () => {
     // YOUR CODE HERE
-    axios.get(`http://localhost:3000/amimals`)
-        .then(response => {
-            return response.data
+    axios.get(`http://localhost:3000/animals`)
+        .then(res => {
+             console.log(res.data)
         })
 }
 
@@ -103,7 +104,11 @@ document.getElementById('animals-button').addEventListener('click', ohMy)
 
 const repeatMyParam = () => {
     //YOUR CODE HERE
+    axios.get('http://localhost:3000/repeat/I-am-legend')
+    .then(res => res.data)
+    res.data = document.getElementById(`repeat-text`).textContent
 }
+document.getElementById(`repeat-button`).addEventListener(`click`,repeatMyParam)
 
 // PROBLEM 7
 /*
